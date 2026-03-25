@@ -57,12 +57,10 @@
                     <span>(4.5/5)</span>
                 </div>
                 <p class="descripcion" id="descripcion-producto"></p>
-
                 <div class="especificaciones">
                     <h3>Especificaciones</h3>
                     <ul id="lista-especificaciones"></ul>
                 </div>
-
                 <div class="acciones-producto">
                     <div class="cantidad">
                         <button id="disminuir">-</button>
@@ -72,7 +70,6 @@
                     <button class="boton boton-gradiente" id="agregar-carrito">Añadir al Carrito</button>
                     <button class="boton boton-gradiente-claro" id="comprar-ahora">Comprar Ahora</button>
                 </div>
-
                 <!-- Compartir en Redes Sociales -->
                 <div class="compartir-producto">
                     <h3>Compartir este producto</h3>
@@ -219,64 +216,57 @@
                     "GPU: 10.28 TFLOPs, 36 CUs a 2.23GHz",
                     "Memoria: 16GB GDDR6/256-bit",
                     "Almacenamiento: 825GB SSD personalizado",
-                    "Resolución: Hasta 8K"
-                ]
-            },
-            {
-                id: 8,
-                nombre: "Xbox Series X",
-                precio: 499.99,
-                imagen: "img/ps5.png",
-                categoria: "consolas",
-                descripcion: "La consola más potente de Microsoft. Disfruta de juegos en 4K a 120 FPS, Quick Resume para cambiar entre juegos al instante y Smart Delivery para actualizaciones gratuitas.",
-                especificaciones: [
-                    "CPU: AMD Zen 2 de 8 núcleos a 3.8GHz",
-                    "GPU: 12 TFLOPs, 52 CUs a 1.825GHz",
-                    "Memoria: 16GB GDDR6",
-                    "Almacenamiento: 1TB NVMe SSD",
-                    "Resolución: Hasta 8K"
-                ]
-            },
-            {
-                id: 9,
-                nombre: "Nintendo Switch OLED",
-                precio: 349.99,
-                imagen: "img/ps5.png",
-                categoria: "consolas",
-                descripcion: "La versátil consola híbrida de Nintendo con pantalla OLED de 7 pulgadas. Juega en casa con la base o llévala contigo para gaming portátil de alta calidad.",
-                especificaciones: [
-                    "Pantalla: OLED de 7 pulgadas (1280x720)",
-                    "CPU/GPU: NVIDIA Custom Tegra",
-                    "Memoria: 4GB LPDDR4",
-                    "Almacenamiento: 64GB",
-                    "Batería: Hasta 9 horas"
-                ]
-            },
-            {
-                id: 10,
-                nombre: "PlayStation 4",
-                precio: 299.99,
-                imagen: "img/ps5 vertical.png",
-                categoria: "consolas",
-                descripcion: "La consola que revolucionó el gaming. Con miles de juegos disponibles, PlayStation 4 ofrece entretenimiento de alta calidad para toda la familia.",
-                especificaciones: [
-                    "CPU: AMD Jaguar de 8 núcleos",
-                    "GPU: 1.84 TFLOPs",
-                    "Memoria: 8GB GDDR5",
-                    "Almacenamiento: 500GB HDD",
-                    "Resolución: Hasta 4K"
-                ]
-            },
-            {
-                id: 11,
-                nombre: "Headset Gaming RGB",
-                precio: 89.99,
-                imagen: "img/headset.png",
-                categoria: "accesorios",
-                descripcion: "Audífonos gaming con iluminación RGB, micrófono desmontable y sonido envolvente 7.1. Perfectos para gaming competitivo y streaming.",
-                especificaciones: [
-                    "Tipo: Over-ear",
-                    "Conectividad: USB 3.5mm",
+                    <!-- Sección de Reseñas -->
+                    <div class="seccion-resenas">
+                        <div class="contenedor-resenas">
+                            <h2>Reseñas de Clientes</h2>
+                            <!-- Formulario para agregar reseña -->
+                            <div class="formulario-resena">
+                                <h3>Escribe tu reseña</h3>
+                                <form id="form-resena">
+                                    <div class="campo-form">
+                                        <label for="nombre">Nombre *</label>
+                                        <input type="text" id="nombre" name="nombre" required>
+                                    </div>
+                                    <div class="campo-form">
+                                        <label>Calificación *</label>
+                                        <div class="rating-input">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="campo-form">
+                                        <label for="titulo">Título de la reseña</label>
+                                        <input type="text" id="titulo" name="titulo" placeholder="Resumen de tu experiencia">
+                                    </div>
+                                    <div class="campo-form">
+                                        <label for="comentario">Comentario *</label>
+                                        <textarea id="comentario" name="comentario" rows="4" required placeholder="Comparte tu experiencia con este producto..."></textarea>
+                                    </div>
+                                    <div class="campo-form checkbox">
+                                        <label>
+                                            <input type="checkbox" name="recomienda" id="recomienda">
+                                            Recomiendo este producto
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="boton boton-gradiente">Publicar Reseña</button>
+                                </form>
+                            </div>
+                            <!-- Lista de reseñas -->
+                            <div class="resenas-container">
+                                <!-- Las reseñas se cargarán dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="productos-relacionados">
+                        <h2>Productos Relacionados</h2>
+                        <div class="grid-relacionados" id="productos-relacionados">
+                            <!-- Los productos relacionados se cargarán dinámicamente -->
+                        </div>
+                    </div>
                     "Iluminación: RGB personalizable",
                     "Micrófono: Desmontable con cancelación de ruido",
                     "Frecuencia: 20Hz - 20kHz"

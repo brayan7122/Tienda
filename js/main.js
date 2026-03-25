@@ -498,7 +498,7 @@ function verificarCompatibilidadNavegador() {
 }
 
 // ===== CLASE API =====
-const API_BASE = 'http://localhost:3000/api';
+const API_BASE = 'http://localhost/tienda';
 
 const LOCAL_PRODUCTS = [
     { id: 1, name: "Apex Legends: Deluxe Edition", price: 59.99, image: "img/apex.jpg", category: "juegos", description: "Battle royale gratuito con contenido deluxe.", specifications: ["Plataforma: PC/PS5/Xbox", "Género: Shooter", "Multijugador: Sí", "Idioma: Español/Inglés"] },
@@ -520,7 +520,7 @@ const LOCAL_PRODUCTS = [
 
 async function fetchProductos() {
     try {
-        const response = await fetch(`${API_BASE}/products`);
+        const response = await fetch(`${API_BASE}/productos.php`);
         if (!response.ok) throw new Error('No se pudo obtener productos');
         const data = await response.json();
         if (Array.isArray(data) && data.length > 0) return data;
@@ -533,7 +533,7 @@ async function fetchProductos() {
 
 async function fetchProductoById(id) {
     try {
-        const response = await fetch(`${API_BASE}/products/${id}`);
+        const response = await fetch(`${API_BASE}/productos.php?id=${id}`);
         if (!response.ok) throw new Error('Producto no encontrado');
         const data = await response.json();
         if (data) return data;
